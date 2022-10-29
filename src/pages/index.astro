@@ -1,6 +1,7 @@
 ---
 import UserCard from "../components/discord/UserCard.astro";
 import Link from "../components/Link.astro";
+import EmailIcon from "../icons/EmailIcon.astro";
 import GitHubIcon from "../icons/GitHubIcon.astro";
 import SpotifyIcon from "../icons/SpotifyIcon.astro";
 import TwitterIcon from "../icons/TwitterIcon.astro";
@@ -12,15 +13,18 @@ import Document from "../layouts/Document.astro";
 		<div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex-col md:items-start mb-16 md:mb-0 justify-center">
 			<div class="flex flex-col xl:flex-row justify-between items-center">
 				<div class="px-24">
-					<h1 class="text-6xl font-bold leading-tight text-white justify-center">
+					<h1 class="text-6xl font-bold leading-tight text-white justify-center text-center">
 						Hiyu, I'm <span class="text-pink-400">Niskii</span>!
 					</h1>
-					<h2 class="text-2xl font-light text-white justify-center">Fullstack Developer</h2>
-					<nav class="flex gap-4 mt-10 justify-center xl:justify-start">
+					<h2 class="text-2xl font-light text-white justify-center text-center xl:text-start">Fullstack Developer</h2>
+					<nav class="flex gap-4 mt-4 justify-center xl:justify-start">
+						<Link href="mailto:business@niskii.dev" label="Email">
+							<EmailIcon />
+						</Link>
 						<Link href="https://github.com/whoisniskii" label="GitHub">
 							<GitHubIcon />
 						</Link>
-						<Link href="https://open.spotify.com/user/wu6vyqmi5jig37nh6nkp3wzhg" label="Twitter">
+						<Link href="https://open.spotify.com/user/wu6vyqmi5jig37nh6nkp3wzhg" label="Spotify">
 							<SpotifyIcon />
 						</Link>
 						<Link href="https://twitter.com/whoisniskii" label="Twitter">
