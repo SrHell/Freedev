@@ -1,20 +1,36 @@
----
-import "../styles/main.css";
-import "../styles/whitney.css";
----
-
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta content="/images/avatar-512.png" property="og:image" />
 		<link href="https://niskii.dev" rel="canonical" />
 		<title>Nicolas Ribeiro</title>
+		<meta content="light dark" name="color-scheme" />
+		<meta content="#181818" name="msapplication-TileColor" />
 		<meta content="minimum-scale=1, initial-scale=1, width=device-width" name="viewport" />
 		<meta content="#181818" name="theme-color" />
 		<link rel="shortcut icon" href="/favicon.svg" />
 		<meta name="description" content="My personal website." />
 	</head>
-	<body class="flex h-screen bg-[#181818] font-['Whitney']">
+	<body class="flex h-screen dark:bg-dark-800 bg-white font-['Whitney']">
+		<script is:inline>
+			function setTheme(prefersDarkMode, persistedColorPreference) {
+				if (persistedColorPreference === "dark" || (prefersDarkMode && persistedColorPreference !== "light")) {
+					document.documentElement.classList.toggle("dark", true);
+				} else {
+					document.documentElement.classList.toggle("dark", false);
+				}
+			}
+			(() => {
+				const prefersDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+				const persistedColorPreference = localStorage.getItem("theme") || "auto";
+				setTheme(prefersDarkMode, persistedColorPreference);
+				const listener =
+					window.matchMedia &&
+					window
+						.matchMedia("(prefers-color-scheme: dark)")
+						.addEventListener("change", (ev) => setTheme(ev.matches, persistedColorPreference));
+			})();
+		</script>
 		<slot />
 	</body>
 </html>
