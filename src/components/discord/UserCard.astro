@@ -1,0 +1,43 @@
+---
+import Avatar from "./Avatar.astro";
+---
+
+<div class="w-[300px] text-slate-200 drop-shadow-xl">
+	<div class="rounded-2xl overflow-hidden bg-zinc-900">
+		<div class="relative">
+			{/* Banner */}
+			<div class="w-full h-[90px] bg-center bg-banner"></div>
+
+			{/* Avatar */}
+			<div class="absolute top-[46px] left-[16px]">
+				<div class="rounded-full select-none">
+					<Avatar />
+				</div>
+			</div>
+
+			{/* Username and tag */}
+			<div class="pt-14 pb-3 px-4">
+				<div class="text-xl font-semibold leading-6">
+					<span class="text-slate-50">Niskii</span>
+					<span class="text-slate-300">#0001</span>
+				</div>
+			</div>
+
+			<div class="px-4 pb-3.5 flex-initial text-sm">
+				<div class="w-full h-[1px] bg-zinc-800 mb-3"></div>
+
+				{/* About me */}
+				<div class="mb-3">
+					<h2 class="font-bold text-xs text-slate-300 leading-4 mb-2 uppercase select-none">About Me</h2>
+					<div class="whitespace-pre-line text-normal">{" he/they, brazilian "}</div>
+				</div>
+
+				{/* Member Since */}
+				<div class="mb-3 select-none">
+					<h2 class="font-bold text-xs text-slate-300 leading-4 mb-2 uppercase">Discord Member Since</h2>
+					<span class="whitespace-pre-line text-normal">May 28, 2021</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

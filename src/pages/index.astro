@@ -1,0 +1,37 @@
+---
+import UserCard from "../components/discord/UserCard.astro";
+import Link from "../components/Link.astro";
+import GitHubIcon from "../icons/GitHubIcon.astro";
+import SpotifyIcon from "../icons/SpotifyIcon.astro";
+import TwitterIcon from "../icons/TwitterIcon.astro";
+import Document from "../layouts/Document.astro";
+---
+
+<Document>
+	<section class="container mx-auto m-auto w-auto grow justify-center flex md:flex-row flex-col items-center">
+		<div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex-col md:items-start mb-16 md:mb-0 justify-center">
+			<div class="flex flex-col xl:flex-row justify-between items-center">
+				<div class="px-24">
+					<h1 class="text-6xl font-bold leading-tight text-white justify-center">
+						Hiyu, I'm <span class="text-pink-400">Niskii</span>!
+					</h1>
+					<h2 class="text-2xl font-light text-white justify-center">Fullstack Developer</h2>
+					<nav class="flex gap-4 mt-10 justify-center xl:justify-start">
+						<Link href="https://github.com/whoisniskii" label="GitHub">
+							<GitHubIcon />
+						</Link>
+						<Link href="https://open.spotify.com/user/wu6vyqmi5jig37nh6nkp3wzhg" label="Twitter">
+							<SpotifyIcon />
+						</Link>
+						<Link href="https://twitter.com/whoisniskii" label="Twitter">
+							<TwitterIcon />
+						</Link>
+					</nav>
+				</div>
+				<div class="mt-12 xl:mt-0">
+					<UserCard />
+				</div>
+			</div>
+		</div>
+	</section>
+</Document>

@@ -1,0 +1,40 @@
+<div
+	role="img"
+	aria-label="avatar"
+	aria-hidden="false"
+	class="w-[92px] h-[92px] border-[6px] relative rounded-full border-zinc-900"
+>
+	<svg width="92" height="80" viewBox="0 0 92 80" class="absolute">
+		<defs>
+			<mask id="avatar-mask">
+				<circle cx="40" cy="40" r="40" fill="white"></circle>
+				<circle cx="68" cy="68" r="14" fill="black"></circle>
+			</mask>
+		</defs>
+		<foreignObject x="0" y="0" width="80" height="80" mask="url(#avatar-mask)">
+			<div class="grid w-full h-full">
+				<picture>
+					<source
+						src-set="/images/avatar-128.webp 1x, /images/avatar-256.webp 2x, /images/avatar-384.webp 3x,/images/avatar-512.webp 4x"
+						type="image/webp"
+					/>
+					<source
+						src-set="/images/avatar-128.png 1x, /images/avatar-256.png 2x, /images/avatar-384.png 3x, /images/avatar-512.png 4x"
+						type="image/png"
+					/>
+					<img
+						src="/images/avatar-128.webp"
+						alt="avatar"
+						width="80"
+						height="80"
+						aria-hidden="true"
+						draggable="false"
+						class="block"
+					/>
+				</picture>
+			</div>
+		</foreignObject>
+
+		<circle cx="68" cy="68" r="8" class="fill-green-600"></circle>
+	</svg>
+</div>

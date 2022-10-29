@@ -1,0 +1,40 @@
+{
+	"compilerOptions": {
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"exactOptionalPropertyTypes": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strict": true,
+		"useUnknownInCatchVariables": true,
+		"baseUrl": ".",
+		"module": "ES2020",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"declaration": true,
+		"importHelpers": true,
+		"importsNotUsedAsValues": "error",
+		"inlineSources": true,
+		"newLine": "lf",
+		"noEmitHelpers": true,
+		"outDir": "dist",
+		"preserveConstEnums": true,
+		"removeComments": false,
+		"sourceMap": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"target": "ES2020",
+		"useDefineForClassFields": true,
+		"paths": {
+			"~/*": ["src/*"]
+		}
+	},
+	"include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.astro"]
+}
