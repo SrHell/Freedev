@@ -1,15 +1,22 @@
 {
-	"extends": ["neo/common", "neo/browser", "neo/node", "neo/typescript", "neo/react", "neo/astro", "neo/prettier"],
+	"extends": ["plugin:astro/recommended"],
 	"parserOptions": {
 		"project": "./tsconfig.eslint.json"
 	},
 	"ignorePatterns": ["**/dist/*"],
+	"overrides": [
+		{
+			"files": ["*.astro"],
+			"parser": "astro-eslint-parser",
+			"parserOptions": {
+				"parser": "@typescript-eslint/parser",
+				"extraFileExtensions": [".astro"]
+			}
+		}
+	],
 	"settings": {
 		"react": {
 			"version": "detect"
 		}
-	},
-	"rules": {
-		"react/jsx-filename-extension": [1, { "extensions": [".tsx", ".astro"] }]
 	}
 }

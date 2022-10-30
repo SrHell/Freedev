@@ -9,12 +9,16 @@ import unocss from "unocss/astro";
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
-		react(), 
-		image({ serviceEntryPoint: "@astrojs/image/sharp" }), 
-		prefetch({ throttle: 3 }), 
+		react(),
+		image({
+			serviceEntryPoint: "@astrojs/image/sharp",
+		}),
+		prefetch({
+			throttle: 3,
+		}),
 		critters(),
-	  compress(), 
-		unocss()
+		compress(),
+		unocss(),
 	],
 	site: "https://niskii.dev",
 });

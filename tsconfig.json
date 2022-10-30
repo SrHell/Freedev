@@ -32,8 +32,14 @@
 		"lib": ["ESNext", "DOM", "DOM.Iterable"],
 		"target": "ES2020",
 		"useDefineForClassFields": true,
+		"types": ["astro/client"],
 		"paths": {
-			"~/*": ["src/*"]
+			"~/*": ["src/*"],
+			"@components/*": ["src/components/*"],
+			"@layouts/*": ["src/layouts/*"],
+			"@types/*": ["src/types/*"],
+			"@hooks/*": ["src/hooks/*"],
+			"@styles/*": ["src/styles/*"]
 		}
 	},
 	"include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.astro"]
