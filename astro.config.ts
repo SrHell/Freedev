@@ -1,7 +1,5 @@
-import image from "@astrojs/image";
 import prefetch from "@astrojs/prefetch";
 import react from "@astrojs/react";
-import compress from "astro-compress";
 import critters from "astro-critters";
 import { defineConfig } from "astro/config";
 import unocss from "unocss/astro";
@@ -10,14 +8,10 @@ import unocss from "unocss/astro";
 export default defineConfig({
 	integrations: [
 		react(),
-		image({
-			serviceEntryPoint: "@astrojs/image/sharp",
-		}),
 		prefetch({
 			throttle: 3,
 		}),
 		critters(),
-		compress(),
 		unocss(),
 	],
 	site: "https://niskii.dev",
