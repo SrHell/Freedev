@@ -10,12 +10,17 @@
 				<circle cx="40" cy="40" r="40" fill="white"></circle>
 				<circle cx="68" cy="68" r="14" fill="black"></circle>
 			</mask>
+
+			<mask id="svg-mask-status-idle" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+				<circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+				<circle fill="black" cx="0.25" cy="0.25" r="0.375"></circle>
+			</mask>
 		</defs>
 		<foreignObject x="0" y="0" width="80" height="80" mask="url(#avatar-mask)">
 			<div class="grid w-full h-full">
 				<picture>
 					<source
-						src-set="/images/avatar-128.webp 1x, /images/avatar-256.webp 2x, /images/avatar-384.webp 3x,/images/avatar-512.webp 4x"
+						src-set="/images/avatar-128.webp 1x, /images/avatar-256.webp 2x, /images/avatar-384.webp 3x, /images/avatar-512.webp 4x"
 						type="image/webp"
 					/>
 					<source
@@ -35,6 +40,6 @@
 			</div>
 		</foreignObject>
 
-		<circle cx="68" cy="68" r="8" class="fill-green-600"></circle>
+		<circle cx="68" cy="68" r="8" class="fill-amber-400" mask="url(#svg-mask-status-idle)"></circle>
 	</svg>
 </div>
