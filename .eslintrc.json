@@ -9,6 +9,7 @@
 			"files": ["*.astro"],
 			"parser": "astro-eslint-parser",
 			"parserOptions": {
+				"sourceType": "module",
 				"parser": "@typescript-eslint/parser",
 				"extraFileExtensions": [".astro"]
 			}
