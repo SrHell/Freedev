@@ -2,7 +2,7 @@
 import "@styles/main.css";
 import "@styles/whitney.css";
 
-import Card from "@components/discord/Card.astro";
+import Card from "@components/discord/Card";
 import Icon from "@components/Icon.astro";
 import Link from "@components/Link.astro";
 import Document from "@layouts/Document.astro";
@@ -46,7 +46,7 @@ import Document from "@layouts/Document.astro";
 				</div>
 
 				<div class="mt-12 xl:mt-0 justify-center items-center">
-					<Card />
+					<Card client:load />
 				</div>
 			</div>
 		</div>

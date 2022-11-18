@@ -26,23 +26,24 @@
 		"react-dom": "^18.0.0"
 	},
 	"devDependencies": {
-		"@astrojs/prefetch": "^0.1.0",
+		"@astrojs/prefetch": "^0.1.1",
 		"@astrojs/react": "^1.2.2",
-		"@iconify-json/fa6-brands": "^1.1.6",
-		"@iconify-json/octicon": "^1.1.20",
-		"@types/node": "^18.11.8",
-		"@types/react": "^18.0.21",
-		"@types/react-dom": "^18.0.6",
-		"@typescript-eslint/parser": "^5.41.0",
-		"@unocss/cli": "^0.46.1",
-		"@unocss/reset": "^0.46.1",
-		"astro": "^1.6.0",
-		"astro-critters": "^1.0.5",
-		"eslint": "^8.26.0",
+		"@iconify-json/fa6-brands": "^1.1.7",
+		"@iconify-json/octicon": "^1.1.23",
+		"@types/node": "^18.11.9",
+		"@types/react": "^18.0.25",
+		"@types/react-dom": "^18.0.9",
+		"@typescript-eslint/parser": "^5.43.0",
+		"@unocss/cli": "^0.46.5",
+		"@unocss/reset": "^0.46.5",
+		"astro": "^1.6.10",
+		"astro-critters": "^1.1.7",
+		"discord-api-types": "^0.37.18",
+		"eslint": "^8.28.0",
 		"eslint-config-neo": "^0.6.3",
-		"eslint-plugin-astro": "^0.20.0",
+		"eslint-plugin-astro": "^0.21.0",
 		"prettier": "^2.6.2",
 		"prettier-plugin-astro": "^0.7.0",
-		"unocss": "^0.46.1"
+		"unocss": "^0.46.5"
 	}
 }
