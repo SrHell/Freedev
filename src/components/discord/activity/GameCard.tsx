@@ -5,10 +5,12 @@ interface CardProps {
 	activity: GatewayActivity;
 }
 
-const getAssetUrl = (appId: string, asset: string) =>
-	asset.startsWith("mp:external")
-		? `https://media.discordapp.net/${asset.replace("mp:", "")}`
-		: `https://cdn.discordapp.com/${appId}/${asset}.webp`;
+export const getAssetUrl = (appId?: string, asset?: string) => {
+	if (!asset && appId) return `https://dcdn.dstn.to/app-icons/${appId}`;
+	if (asset && asset.startsWith("mp:external")) return `https://media.discordapp.net/${asset.replace("mp:", "")}`;
+
+	return `https://cdn.discordapp.com/app-assets/${appId}/${asset}.webp`
+};
 
 export function GameCard({ activity }: CardProps) {
 	const time = useTime(activity.timestamps!, false);
@@ -21,7 +23,7 @@ export function GameCard({ activity }: CardProps) {
 			<div className="items-center flex">
 				<div className="relative self-start select-none">
 					<img
-						src={getAssetUrl(activity.application_id!, activity.assets!.large_image!)}
+						src={getAssetUrl(activity.application_id, activity.assets?.large_image)}
 						width="60"
 						height="60"
 						className={"block object-cover rounded-lg"}
@@ -29,7 +31,7 @@ export function GameCard({ activity }: CardProps) {
 
 					{activity.assets && activity.assets.small_image && activity.assets.large_image && (
 						<img
-							src={getAssetUrl(activity.application_id!, activity.assets.small_image)}
+							src={getAssetUrl(activity.application_id, activity.assets.small_image)}
 							width="20"
 							height="20"
 							className="rounded-full absolute -bottom-1 -right-1"
