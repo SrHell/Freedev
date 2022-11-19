@@ -1,10 +1,16 @@
 import { AvatarMask, StatusDnd, StatusIdle, StatusOffline } from "@masks/Masks";
 import type { Status } from "~/composables/use-user";
-import { StatusMask } from "./StatusMask";
 
 interface CardProps {
 	status: Status;
 }
+
+const statusClasses = {
+	online: "fill-green-600",
+	idle: "fill-amber-400",
+	dnd: "fill-red-500",
+	offline: "fill-slate-500",
+};
 
 export default function CardAvatar({ status }: CardProps) {
 	return (
@@ -14,7 +20,7 @@ export default function CardAvatar({ status }: CardProps) {
 			aria-hidden="false"
 			className="w-[92px] h-[92px] border-6 relative rounded-full border-white dark:border-zinc-900"
 		>
-			<svg width="92" height="92" viewBox="0 0 92 92" className="absolute">
+			<svg width="80" height="80" viewBox="0 0 80 80" className="absolute">
 				<defs>
 					<AvatarMask />
 					<StatusDnd />
@@ -35,8 +41,8 @@ export default function CardAvatar({ status }: CardProps) {
 							<img
 								src="/images/avatar-128.webp"
 								alt="discord-avatar"
-								width="80"
-								height="80"
+								width="92"
+								height="92"
 								aria-hidden="true"
 								draggable="false"
 								className="block"
@@ -45,7 +51,7 @@ export default function CardAvatar({ status }: CardProps) {
 					</div>
 				</foreignObject>
 
-				<StatusMask data={status} />
+				<circle cx="68" cy="68" r="8" className={statusClasses[status]} mask={`url(#svg-mask-status-${status})`} />;
 			</svg>
 		</div>
 	);

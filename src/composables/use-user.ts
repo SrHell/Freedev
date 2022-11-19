@@ -12,7 +12,7 @@ export const useUser = () => {
 			id: "847865068657836033",
 			discriminator: "8956",
 			bot: false,
-			avatar: "c71b9669a8068273b3505c268dee12fbs",
+			avatar: "c70269bfcbfb509b698914e37846efaa",
 		},
 		discord_status: "offline",
 		activities: [],
@@ -35,7 +35,7 @@ export class Lanyard {
 		this.ws = new WebSocket("wss://api.lanyard.rest/socket");
 
 		this.ws.onopen = () => {
-			console.info("[Lanyard] Successfully connected");
+			console.info("[WS]: Successfully connected");
 		};
 
 		this.ws.onmessage = ({ data }) => {
@@ -57,13 +57,13 @@ export class Lanyard {
 					break;
 
 				default:
-					console.info(`[Lanyard] Unknown message: ${data}`);
+					console.info(`[WS]: Unknown message: ${data}`);
 			}
 		};
 
 		this.ws.onclose = ({ code }) => {
 			clearInterval(this.heartbeat);
-			console.info(`[Lanyard] Connection closed with code ${code}. Retrying in 1 second.`);
+			console.info(`[WS]: Connection closed with code ${code}. Retrying in 1 second.`);
 
 			setTimeout(() => {
 				this.connect(setUser);
