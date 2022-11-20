@@ -31,7 +31,7 @@ export function GameCard({ activity }: CardProps) {
 
 					{activity.assets && activity.assets.small_image && activity.assets.large_image && (
 						<img
-							src={getAssetUrl(activity.application_id, activity.assets.small_image)}
+							src={getAssetUrl(activity.application_id, activity.assets?.small_image)}
 							width="20"
 							height="20"
 							className="rounded-full absolute -bottom-1 -right-1"
@@ -48,7 +48,7 @@ export function GameCard({ activity }: CardProps) {
 					<div className="text-slate-300 block whitespace-nowrap text-ellipsis overflow-hidden">{activity.state}</div>
 
 					{/* Progress */}
-					{activity.timestamps && (
+					{activity.timestamps && activity.timestamps > 0 && (
 						<div className="block whitespace-nowrap text-ellipsis overflow-hidden text-slate-300">
 							{time && time.start && !time.end ? `${time.start} elapsed` : `${time!.end} left`}
 						</div>
