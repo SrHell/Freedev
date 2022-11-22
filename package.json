@@ -45,5 +45,6 @@
 		"prettier": "^2.6.2",
 		"prettier-plugin-astro": "^0.7.0",
 		"unocss": "^0.46.5"
-	}
+	},
+	"packageManager": "yarn@4.0.0-rc.31"
 }
